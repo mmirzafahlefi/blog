@@ -2068,9 +2068,3 @@ a {
       .site-footer .social li a:hover {
         background: #f79918;
         color: #fff; }
-
-.bx-search {
-    position: absolute;
-    top: 10px;
-    left: 15px;
-    font-size: 18px; }
