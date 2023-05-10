@@ -264,13 +264,6 @@ progress {
 [hidden] {
   display: none !important; }
 
-.bx-search {
-    position: absolute;
-    top: 10px;
-    left: 15px;
-    font-size: 18px;
-}
-
 .lead {
   font-size: 1.25rem;
   font-weight: 300; }
@@ -2075,3 +2068,9 @@ a {
       .site-footer .social li a:hover {
         background: #f79918;
         color: #fff; }
+
+.bx-search {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 18px; }
