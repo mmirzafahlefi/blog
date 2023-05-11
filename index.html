@@ -77,9 +77,9 @@
 <li><a href="#">Business</a></li>
 <li style="display:flex;justify-content: space-between;">
 <a href="#" id="theme">Mode</a>
-<div class="toggle-switch" onclick="themeToggle()">
+<div class="toggle-switch">
   <label class="switch-label">
-    <input type="checkbox" class="checkbox">
+    <input type="checkbox" class="checkbox" onclick="themeToggle()">
     <span class="slider"></span>
   </label>
 </div>
@@ -769,13 +769,13 @@
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 <script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-			gtag('config', 'UA-23581568-13');
+gtag('config', 'UA-23581568-13');
 	
-	(function() {
+(function() {
   let onpageLoad = localStorage.getItem("theme") || "";
   let element = document.body;
   element.classList.add(onpageLoad);
