@@ -10,8 +10,12 @@
 	--card-bg-color: #607d8b;
 }
 
-body, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, a {
+body {
 	background-color: var(--color-bg);
+	color: var(--color-fg);
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, a {
 	color: var(--color-fg);
 }
 
