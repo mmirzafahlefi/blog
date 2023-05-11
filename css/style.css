@@ -1646,8 +1646,7 @@ textarea.form-control {
     .site-mobile-menu .site-nav-wrap a {
       padding: 5px 20px;
       display: block;
-      position: relative;
-      color: #000; }
+      position: relative; }
       .site-mobile-menu .site-nav-wrap a:hover {
         color: #f79918; }
     .site-mobile-menu .site-nav-wrap li {
