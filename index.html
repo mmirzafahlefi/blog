@@ -79,7 +79,7 @@
 <a href="#" id="theme">Mode</a>
 <div class="toggle-switch">
   <label class="switch-label">
-    <input type="checkbox" class="checkbox" id="myCheck" onclick="themeToggle()">
+    <input type="checkbox" class="checkbox" id="mode">
     <span class="slider"></span>
   </label>
 </div>
@@ -775,30 +775,32 @@ gtag('js', new Date());
 
 gtag('config', 'UA-23581568-13');
 	
-(function() {
-  let onpageLoad = localStorage.getItem("theme") || "";
-  let element = document.body;
-  element.classList.add(onpageLoad);
-  document.getElementById("theme").textContent =
-    localStorage.getItem("theme") || "light";
-})();
-
-function themeToggle() {
-  let element = document.body;
-  element.classList.toggle("dark-mode");
-
-  let theme = localStorage.getItem("theme");
-  if (theme && theme === "dark-mode") {
-    document.getElementById("myCheck").checked = false;
-    localStorage.setItem("theme", "");
+const modeBtn = document.getElementById('mode');
+modeBtn.onchange = (e) => {
+  if (modeBtn.checked === true) {
+    document.documentElement.classList.remove("light")
+    document.documentElement.classList.add("dark")
+    window.localStorage.setItem('mode', 'dark');
   } else {
-    localStorage.setItem("theme", "dark-mode");
-    document.getElementById("myCheck").checked = true;
+    document.documentElement.classList.remove("dark")
+    document.documentElement.classList.add("light")
+    window.localStorage.setItem('mode', 'light');
   }
-
-  document.getElementById("theme").textContent = localStorage.getItem("theme");
 }
-		</script>
+
+const mode = window.localStorage.getItem('mode');
+if (mode == 'dark') {
+  modeBtn.checked = true;
+  document.documentElement.classList.remove("light")
+  document.documentElement.classList.add("dark")
+}
+
+if (mode == 'light') {
+  modeBtn.checked = false;
+  document.documentElement.classList.remove("dark")
+  document.documentElement.classList.add("light")
+}
+</script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon='{"rayId":"7c48b489384e44b2","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2023.4.0","si":100}' crossorigin="anonymous"></script>
 </body>
 </html>
