@@ -1,4 +1,19 @@
-body.dark-mode{background-color:#121212;color:#fff}
+:root,
+:root.light {
+	--color-bg: #ffffff;
+	--color-fg: #000000;
+	--card-bg-color: #fafafa;
+}
+:root.dark {
+	--color-bg: #121212;
+	--color-fg: #ffffff;
+	--card-bg-color: #607d8b;
+}
+
+body {
+	background-color: var(--color-bg);
+	color: var(--color-fg);
+}
 
 .toggle-switch {
   position: relative;
