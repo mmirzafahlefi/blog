@@ -1872,7 +1872,7 @@ a {
       border-radius: 50%; }
   .post-entry .post-author strong {
     font-weight: 400;
-    color: #000;
+    /*color: #000;*/
     font-weight: 700;
     display: block;
     line-height: 1; }
@@ -1880,7 +1880,7 @@ a {
     font-size: 13px;
     color: #888; }
   .post-entry .post-meta .category {
-    color: #222;
+    /* color: #222; */
     font-weight: 600; }
   .post-entry.small-post-entry-v .thumbnail {
     -webkit-box-flex: 0 !important;
