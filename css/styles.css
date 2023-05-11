@@ -10,7 +10,7 @@
 	--card-bg-color: #607d8b;
 }
 
-body, site-mobile-menu {
+body, .site-mobile-menu {
 	background-color: var(--color-bg);
 	color: var(--color-fg);
 }
