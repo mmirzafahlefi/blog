@@ -1854,8 +1854,8 @@ a {
   position: relative; }
   .post-entry img {
     border-radius: 7px; }
-  .post-entry .heading a {
-    color: #222; }
+  /*.post-entry .heading a {
+    color: #222; }*/
   .post-entry .thumbnail {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 440px;
