@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="css/styles.css">
 <title>MagDesign &mdash; Free Bootstrap 5 Website Template by Colorlib</title>
 </head>
-<body>
+<body class="">
 <div class="site-mobile-menu site-navbar-target">
 <div class="site-mobile-menu-header">
 <div class="site-mobile-menu-close">
@@ -76,8 +76,8 @@
 <li><a href="#">Technology</a></li>
 <li><a href="#">Business</a></li>
 <li style="display:flex;justify-content: space-between;">
-<a href="#">Mode</a>
-<div class="toggle-switch">
+<a href="#" id="theme">Mode</a>
+<div class="toggle-switch" onclick="themeToggle()">
   <label class="switch-label">
     <input type="checkbox" class="checkbox">
     <span class="slider"></span>
@@ -774,6 +774,28 @@
 			gtag('js', new Date());
 
 			gtag('config', 'UA-23581568-13');
+	
+	(function() {
+  let onpageLoad = localStorage.getItem("theme") || "";
+  let element = document.body;
+  element.classList.add(onpageLoad);
+  document.getElementById("theme").textContent =
+    localStorage.getItem("theme") || "light";
+})();
+
+function themeToggle() {
+  let element = document.body;
+  element.classList.toggle("dark-mode");
+
+  let theme = localStorage.getItem("theme");
+  if (theme && theme === "dark-mode") {
+    localStorage.setItem("theme", "");
+  } else {
+    localStorage.setItem("theme", "dark-mode");
+  }
+
+  document.getElementById("theme").textContent = localStorage.getItem("theme");
+}
 		</script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon='{"rayId":"7c48b489384e44b2","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2023.4.0","si":100}' crossorigin="anonymous"></script>
 </body>
