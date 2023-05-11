@@ -10,7 +10,7 @@
 	--card-bg-color: #607d8b;
 }
 
-body {
+* {
 	background-color: var(--color-bg);
 	color: var(--color-fg);
 }
