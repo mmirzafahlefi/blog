@@ -79,7 +79,7 @@
 <a href="#" id="theme">Mode</a>
 <div class="toggle-switch">
   <label class="switch-label">
-    <input type="checkbox" class="checkbox" onclick="themeToggle()">
+    <input type="checkbox" class="checkbox" id="myCheck" onclick="themeToggle()">
     <span class="slider"></span>
   </label>
 </div>
@@ -789,6 +789,7 @@ function themeToggle() {
 
   let theme = localStorage.getItem("theme");
   if (theme && theme === "dark-mode") {
+	document.getElementById("myCheck").checked = true;
     localStorage.setItem("theme", "");
   } else {
     localStorage.setItem("theme", "dark-mode");
