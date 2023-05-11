@@ -789,10 +789,11 @@ function themeToggle() {
 
   let theme = localStorage.getItem("theme");
   if (theme && theme === "dark-mode") {
-	document.getElementById("myCheck").checked = true;
+    document.getElementById("myCheck").checked = false;
     localStorage.setItem("theme", "");
   } else {
     localStorage.setItem("theme", "dark-mode");
+    document.getElementById("myCheck").checked = true;
   }
 
   document.getElementById("theme").textContent = localStorage.getItem("theme");
