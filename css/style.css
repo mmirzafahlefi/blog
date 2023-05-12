@@ -1401,7 +1401,7 @@ textarea.form-control {
   color: rgba(0, 0, 0, 0.5) !important; }
 
 .bg-light {
-  background-color: #f8f9fa !important; }
+  background-color: var(--card-bg-color) !important; }
 
 /* rtl:begin:remove */
 
